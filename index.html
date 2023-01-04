@@ -98,9 +98,9 @@
 			</div>
 
 			<!-- Mobile menu  -->
-			<div id="mob-menu" class="hidden">
+			<div id="mob-menu" class="hidden z-10">
 				<div
-					class="flex flex-col pt-12 gap-9 absolute top-12 right-0 lg:hidden bg-almostWhite w-1/2 h-screen"
+					class="-mt-12 flex flex-col pt-12 gap-9 absolute top-12 right-0 lg:hidden bg-almostWhite w-1/2 h-screen"
 				>
 					<div class="feature">
 						<a
@@ -237,7 +237,7 @@
 			<!-- Hamburger -->
 			<button
 				id="menu-btn"
-				class="hamburger focus:outline-none block lg:hidden"
+				class="z-10 hamburger focus:outline-none block lg:hidden"
 			>
 				<span class="hamburger-top"></span>
 				<span class="hamburger-middle"></span>
@@ -248,6 +248,9 @@
 		<main
 			class="-z-30 lg:container mx-auto lg:h-[90vh] flex items-center justify-between gap-8 lg:gap-32 pt-10 lg:py-20 md:container flex-col-reverse lg:flex-row"
 		>
+			<div
+				class="overlay hidden absolute top-0 left-0 w-[100%] h-[100%] backdrop-blur-sm bg-overlay z-0 lg:hidden"
+			></div>
 			<!-- text -->
 			<div class="w-4/5 lg:w-1/2 mx-auto text-center lg:text-left">
 				<h1 class="-z-30 font-extrabold text-7xl mb-12 hidden lg:block">

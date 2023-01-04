@@ -1,5 +1,6 @@
 const btn = document.getElementById("menu-btn");
 const mobMenu = document.getElementById("mob-menu");
+const overlay = document.querySelector(".overlay");
 
 // DESKTOP:
 // feature dorpdown
@@ -26,11 +27,21 @@ const mobDropDownC = document.querySelector(".down-mob-comp");
 const mobcomp = document.getElementById("mob-comp");
 const mobCDrop = document.getElementById("mob-comp-drop");
 
+// hamburger button
 btn.addEventListener("click", () => {
 	btn.classList.toggle("open");
 	mobMenu.classList.toggle("hidden");
+	overlay.classList.toggle("hidden");
 });
 
+// overlay
+overlay.addEventListener("click", () => {
+	btn.classList.toggle("open");
+	mobMenu.classList.toggle("hidden");
+	overlay.classList.toggle("hidden");
+});
+
+// MOBILE
 mobfeat.addEventListener("click", () => {
 	mobDropUpF.classList.toggle("hidden");
 	mobDropDownF.classList.toggle("hidden");
@@ -45,6 +56,7 @@ mobcomp.addEventListener("click", () => {
 	mobCDrop.classList.toggle("hidden");
 });
 
+// Desktop
 feat.addEventListener("click", () => {
 	DropUpF.classList.toggle("hidden");
 	DropDownF.classList.toggle("hidden");
